@@ -1,0 +1,253 @@
+1.print("Demo of basic data types:Numbers")
+ x=3
+ y=2.5
+ print("x=",x)
+ print("y=",y)
+ print("Data type of variable x:",type(x))
+ print("Data type of variable y:",type(y))
+ print("Addition :",x+y)
+ print("Subtraction :",x-y)
+ print("Multiplication :",x*y)
+ print("Exponention :",x**2)
+
+Output:
+
+Demo of basic data types:Numbers
+x= 3
+y= 2.5
+Data type of variable x: <class 'int'>
+Data type of variable y: <class 'float'>
+Addition : 5.5
+Subtraction : 0.5
+Multiplication : 7.5
+Exponention : 9
+
+
+2.print("Demo of basic data types:Boolean")
+ t=True
+ f=False
+ print("t=",t)
+ print("f=",f)
+ print("Data type of variable t :",type(t))
+ print("Data type of variable f :",type(f))
+ print("Logical AND operation :",t and f)
+ print("Logical OR opertion :",t or f)
+ print("Logical XOR operation :",t !=f)
+ rint("Logical NOT operation :",not f)
+
+Output:
+
+Demo of basic data types:Boolean
+t= True
+f= False
+Data type of variable t : <class 'bool'>
+Data type of variable f : <class 'bool'>
+Logical AND operation : False
+Logical OR opertion : True
+Logical XOR operation : True
+Logical NOT operation : True
+
+
+3.s="hello"
+ t="world"
+ print("String1:",s)
+ print("String2:",t)
+ d=s+" "+t
+ print("String Concatenation : ",d)
+ print("Capitalize : ",d.capitalize())
+ print("Converted to upper case :",s.upper())
+ print("Right justify a string :",s.rjust(7))
+ print("String at center :",s.center(7))
+ print("After replacing l with ell :",s.replace('l','(ell)'))
+ print("String after stripping leading and trailing white spaces :",'world'.strip())
+
+
+Output:
+
+String1: hello
+String2: world
+String Concatenation :  hello world
+Capitalize :  Hello world
+Converted to upper case : HELLO
+Right justify a string :   hello
+String at center :  hello 
+After replacing l with ell : he(ell)(ell)o
+String after stripping leading and trailing white spaces : world
+
+
+4.print("Containers:Lists")
+ num=list(range(5))
+ print("List 'num' contains :",num)
+ nums[4]="abc"
+ print("List can contain elements of different types.Example :",num)
+ num.append("xyz")
+ print("'num' after inserting new element at the end :")
+ print("sublist :")
+ print("A slice from index 2 to 4 :",num[2:4])
+ print("A slice from index 2 to the end :",num[2:])
+ print("A slice from tge start to the index 2 :",num[:2])
+ print("A slice of the whole list :",num[:])
+ num[4:]=[8,9]
+ print("After Assigning a new sublist to 'num' :")
+ for idx,i in enumerate (num):
+    print('%d : %s' %(idx +1,i))
+ even_squares =[x**2 for x in num if x %2==0]
+ print("List of squares of even number from 'num' :",even_squares) 
+
+Output:
+
+Containers:Lists
+List 'num' contains : [0, 1, 2, 3, 4]
+List can contain elements of different types.Example : [0, 1, 2, 3, 4]
+'num' after inserting new element at the end :
+sublist :
+A slice from index 2 to 4 : [2, 3]
+A slice from index 2 to the end : [2, 3, 4, 'xyz']
+A slice from tge start to the index 2 : [0, 1]
+A slice of the whole list : [0, 1, 2, 3, 4, 'xyz']
+After Assigning a new sublist to 'num' :
+1 : 0
+2 : 1
+3 : 2
+4 : 3
+5 : 8
+6 : 9
+List of squares of even number from 'num' : [0, 4, 64]
+
+
+5.print("Containers:Dictionaries")
+ d=dict()
+ d={'cat':'cute','dog':'furry'}
+ print("Dictionary:",d)
+ print("Is the dictionary has the key 'cat'?",'cat' in d)
+ d['fish']='wet'
+ print("After adding new entry to 'd':",d)
+ print("Get an element monkey :",d.get('monkey','N/A'))
+ print("Get an element fish :",d.get('fish','N/A'))
+ del d['fish']
+ print("After deleting the newly added entry from  'd':",d)
+ print("Demo of dictionary comprehension:")
+ squares={x:x*x for x in range(10)}
+ print("Squares of integers of range 10 :")
+ for k,v in squares.items():
+    print(k,":",v)
+
+Output:
+
+Containers:Dictionaries
+Dictionary: {'cat': 'cute', 'dog': 'furry'}
+Is the dictionary has the key 'cat'? True
+After adding new entry to 'd': {'cat': 'cute', 'dog': 'furry', 'fish': 'wet'}
+Get an element monkey : N/A
+Get an element fish : wet
+After deleting the newly added entry from  'd': {'cat': 'cute', 'dog': 'furry'}
+Demo of dictionary comprehension:
+Squares of integers of range 10 :
+0 : 0
+1 : 1
+2 : 4
+3 : 9
+4 : 16
+5 : 25
+6 : 36
+7 : 49
+8 : 64
+9 : 81
+
+
+6.print("Containers")
+ num1={100,110,120}
+ print("Set 'num1':",num1)
+ num1.add(90)
+ print("'num1' after inserting 90 :",num1)
+ num1.update([50,60,70])
+ print("'num1'after inserting multiple elements:",num1)
+ num1.remove(60)
+ print("After removing 60 :",num1)
+ print("Set comprehension and set operations :")
+ n1={x for x in range(10)}
+ print("n1=",n1)
+ n2={x for x in range(10) if x%2!=0}
+ print("n2=",n2)
+ print("n1 UNION n2 :",n1|n2)
+ print("n1 INTERSECTION n2:",n1&n2)
+ print("n1 DIFFERENCE n2:",n1-n2)
+
+Output:
+
+Containers
+Set 'num1': {120, 100, 110}
+'num1' after inserting 90 : {120, 90, 100, 110}
+'num1'after inserting multiple elements: {100, 70, 110, 50, 120, 90, 60}
+After removing 60 : {100, 70, 110, 50, 120, 90}
+Set comprehension and set operations :
+n1= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+n2= {1, 3, 5, 7, 9}
+n1 UNION n2 : {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+n1 INTERSECTION n2: {1, 3, 5, 7, 9}
+n1 DIFFERENCE n2: {0, 2, 4, 6, 8}
+
+
+7.print("Containers:Tuples")
+ d={(x,x + 1):x for x in range(10)}
+ print("Tuple:")
+ for k,v in d.items():
+    print(k,":",v)
+ t=(5,6)
+ print("Tuple t:",t)
+ print(d[t])
+ print(d[1,2])
+
+Output:
+
+Containers:Tuples
+Tuple:
+(0, 1) : 0
+(1, 2) : 1
+(2, 3) : 2
+(3, 4) : 3
+(4, 5) : 4
+(5, 6) : 5
+(6, 7) : 6
+(7, 8) : 7
+(8, 9) : 8
+(9, 10) : 9
+Tuple t: (5, 6)
+5
+1
+
+8.print("Demo of function : Program to find factorial of a number")
+ def fact(n):
+    if n==1:
+        return 1
+    else:
+        return(n* fact(n-1))
+ n=int(input("Enter a number : "))
+ print("FACTORIAL : ",fact(n))
+
+Output:
+
+Demo of function : Program to find factorial of a number
+Enter a number : 5
+FACTORIAL :  120
+
+
+9.class Greeter:
+    def __init__(self,name):
+        self.name=name
+    def greet(self,loud=False):
+        if loud:
+            print('Hello,%s!'%self.name.upper())
+        else:
+            print('Hello,%s'%self.name)
+ g=Greeter('Fred')
+ g.greet()
+ g.greet(loud=True)
+
+Output:
+
+Hello,Fred
+Hello,FRED!
+
+
+
